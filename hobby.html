@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Personal Website</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #a7d0e2, #ffffff);
+      overflow-x: hidden;
+    }
+
+    header {
+      background-image: url('dolphin3.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3em;
+      z-index: 1;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #024873;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4abfd9;
+    }
+
+    section {
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 900px;
+      border-radius: 10px;
+      background-color: #fefefe;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .text-container {
+      overflow: hidden;
+      width: 100%;
+      background: #e0f7fa;
+      padding: 10px;
+    }
+
+    .animated-text {
+      white-space: nowrap;
+      display: inline-block;
+      animation: slideRightToLeft 8s linear infinite;
+      font-size: 22px;
+      color: #026d87;
+    }
+
+    @keyframes slideRightToLeft {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .floating-dolphin {
+      width: 100px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      animation: floatDolphin 4s ease-in-out infinite;
+    }
+
+    @keyframes floatDolphin {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #a7d0e2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    
+    <h1>WELCOME TO MY PARADISE</h1>
+  </header>
+
+  <nav>
+    <a href="indexx1.html">HOME</a>
+    <a href="aboutme1.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY</a>
+    <a href="experience.html">EXPERIENCE</a>
+  
+    <a href="hobby.html">HOBBY</a>
+    <a href="favouriteplace.html">FAV PLACE</a>
+    <a href="favouritemusic.html">FAV MUSIC</a>
+    <a href="gallery.html">GALLERY</a>
+  </nav>
+
+  <div class="text-container">
+    <div class="animated-text">🌊 Extraordinary like Woo Young Woo! 🐬</div>
+  </div>
+
+  <section>
+    <center>
+  <audio controls autoplay>
+  <source src="song1.ogg" type="audio/ogg">
+  <source src="beyondmydreams.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </center>
+  </section>
+
+  
+
+  <footer>
+    <p>Rynaa, All rights reserved | Educational purposes only</p>
+  </footer>
+
+</body>
+</html

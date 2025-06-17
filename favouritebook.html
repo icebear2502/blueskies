@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Website</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #a7d0e2, #ffffff);
+      overflow-x: hidden;
+    }
+
+    header {
+      background-image: url('dolphin3.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3em;
+      z-index: 1;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #024873;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4abfd9;
+    }
+
+    .card-section {
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+    }
+
+    .card-container {
+      width: 300px;
+      height: 420px;
+      perspective: 1000px;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .card .front, .card .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .card .front {
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      flex-direction: column;
+    }
+
+    .card .front img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .card .front h3 {
+      margin-top: 10px;
+      color: #024873;
+    }
+
+    .card .back {
+      background: linear-gradient(135deg, #f5e1ff, #d7eaff);
+      transform: rotateY(180deg);
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .card .back p {
+      color: #333;
+      font-size: 15px;
+    }
+
+    .music-player {
+      margin: 60px auto;
+      background: radial-gradient(circle, #f4e1ff, #e0f7fa);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .music-player h4 {
+      color: #026d87;
+      margin-bottom: 15px;
+    }
+
+    audio {
+      width: 100%;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #a7d0e2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WELCOME TO MY PARADISE</h1>
+  </header>
+
+  <nav>
+    <a href="indexx1.html">HOME</a>
+    <a href="aboutme1.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="favouritebook.html">FAV BOOK</a>
+    <a href="gallery.html">GALLERY</a>
+  </nav>
+
+
+  <section class="card-section">
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <img src="teme 1.webp" alt="Extraordinary Attorney Woo">
+          
+        </div>
+        <div class="back">
+          <p>Bayangan Sofea merupakan sebuah kisah menyentuh jiwa yang membawa pembaca menyelami perjalanan hidup seorang gadis bernama Sofea yang terperangkap antara realiti dan emosi sendiri. Kisah ini mengangkat isu kesihatan mental, trauma, serta proses mencari ketenangan dan keikhlasan dalam menghadapi masa lalu yang gelap. Melalui naratif yang mendalam dan puitis, Teme Abdullah menyampaikan mesej tentang pengampunan, kebergantungan kepada Tuhan, dan kekuatan untuk berubah walau dilukai masa silam.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <img src="teme 2.png" alt="Harry Potter">
+         
+        </div>
+        <div class="back">
+          <p>Pelukis Jalanan mengisahkan perjalanan seorang pelajar Malaysia yang merantau ke London dan memilih untuk menjadi pelukis jalanan demi menampung kehidupan dan pengajiannya. Dalam suasana penuh cabaran dan tekanan, watak utama belajar erti ketabahan, keikhlasan, dan kebergantungan kepada Allah. Melalui seni dan interaksi dengan masyarakat sekeliling, dia menemui makna sebenar hidup, pengorbanan, dan keberanian untuk terus melangkah walau dunia seperti berpaling.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <img src="teme 3.jpg" alt="The Little Prince">
+          
+        </div>
+        <div class="back">
+          <p>Rahsia Danny mengisahkan tentang Danny, seorang pelajar cemerlang yang kelihatan sempurna di mata masyarakat — bijak, berdisiplin, disenangi. Namun, di sebalik wajah tenangnya itu, tersembunyi rahsia besar yang hanya dia seorang tahu. Cerita ini menggali sisi gelap kehidupan seorang pelajar, yang selama ini memendam perasaan, tekanan, dan kisah silam yang mengganggu jiwanya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="music-player">
+    <h4>🎶 My Reading Vibe 🎶</h4>
+    <audio controls>
+      <source src="beyondmydreams.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <footer>
+    <p>Rynaa, All rights reserved | Educational purposes only</p>
+  </footer>
+</body>
+</html>
