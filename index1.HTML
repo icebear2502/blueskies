@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website</title>
+  <style>
+    body {
+      background-image: url('dolphin9.jpeg');
+      background-attachment: fixed;
+      background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      color: antiquewhite;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3em;
+      z-index: 1;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #024873;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4abfd9;
+    }
+
+    section {
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 900px;
+      border-radius: 10px;
+      background-color: #fefefe;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .text-container {
+      overflow: hidden;
+      width: 100%;
+      background: #e0f7fa;
+      padding: 10px;
+    }
+
+    .animated-text {
+      white-space: nowrap;
+      display: inline-block;
+      animation: slideRightToLeft 8s linear infinite;
+      font-size: 22px;
+      color: #026d87;
+    }
+
+    @keyframes slideRightToLeft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .intro-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 2px solid #024873;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .intro-box h2 {
+      color: #024873;
+    }
+
+    .intro-box p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .clock-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .digital-clock {
+      font-size: 30px;
+      font-weight: bold;
+      background: #024873;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
+    }
+
+    .calendar {
+      background-color: #ffffff;
+      padding: 10px 20px;
+      border: 2px solid #026d87;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      font-size: 18px;
+      color: #024873;
+    }
+
+    footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #a7d0e2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WELCOME TO MY PARADISE</h1>
+  </header>
+
+  <nav>
+    <a href="indexx1.html">HOME</a>
+    <a href="aboutme1.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="favouritebook.html">FAV BOOK</a>
+    <a href="gallery.html">GALLERY</a>
+  </nav>
+
+  <div class="text-container">
+    <div class="animated-text">🌊 "You are stronger than you think, braver than you believe, and smarter than you know."🌈</div>
+  </div>
+
+  <section class="intro-box">
+    <h2>Hello & Welcome!</h2>
+    <p>Welcome to my world 🌷 I'm Rynaa, just a girl with big dreams, a love for the ocean, and a heart full of stories. Feel free to explore and stay as long as you like!</p>
+  </section>
+
+  <section class="clock-container">
+    <div class="digital-clock" id="digitalClock"></div>
+    <div class="calendar" id="calendar"></div>
+  </section>
+
+  <section>
+    <center>
+      <audio controls autoplay>
+        <source src="song1.ogg" type="audio/ogg">
+        <source src="beyondmydreams.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </center>
+  </section>
+
+  <footer>
+    <p>Rynaa, All rights reserved | Educational purposes only</p>
+  </footer>
+
+  <script>
+    function updateDigitalClock() {
+      const now = new Date();
+      const malaysiaOffset = 8 * 60;
+      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+      const malaysiaTime = new Date(utc + malaysiaOffset * 60000);
+
+      const hours = String(malaysiaTime.getHours()).padStart(2, '0');
+      const minutes = String(malaysiaTime.getMinutes()).padStart(2, '0');
+      const seconds = String(malaysiaTime.getSeconds()).padStart(2, '0');
+
+      const timeString = `${hours}:${minutes}:${seconds}`;
+      document.getElementById('digitalClock').textContent = timeString;
+
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById("calendar").textContent = malaysiaTime.toLocaleDateString("en-MY", options);
+    }
+
+    setInterval(updateDigitalClock, 1000);
+    updateDigitalClock();
+  </script>
+</body>
+</html>
